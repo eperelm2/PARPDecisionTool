@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-right: 4%; 
+    margin-left: 3%; 
+    text-align: left;
+    margin-top: 3%;
+    color:#3C3C44; 
+    font-family: 'Inria Serif', serif;
+}
+
+.header-title{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.header-text{
+    padding-top: 1%;
+    width: 70%;
+    font-style: italic;
+    font-size: 16px;
+}
+
+.whats-next-section{
+    padding-top: 3%;
+}
+
+.whats-next-header{
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.whats-next-text{
+    padding-top: 1%;
+    font-size: 16px;
+}
+
+.eligibility-criteria-section{
+    padding-top:3%;
+}
+
+.eligibility-criteria-header{
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.eligibility-criteria-text{
+    padding-top: 1%;
+    font-size: 16px;
+}
