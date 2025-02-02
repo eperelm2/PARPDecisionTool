@@ -4,7 +4,9 @@
     <title>BRCA Mutation</title>
     <link rel="stylesheet" href="brcamutationstyle.css">
     <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@400;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"> -->
 </head>
 <body>
     <div class="header-section">
@@ -36,5 +38,147 @@
             </li>
         </div>
     </div>
+
+    <div class="grid-list-button">
+        <button class="grid-button" id="open-dropdown">
+            <span class="material-icons small-icon">grid_view</span>
+             <div class="grid-view-text">Grid View</div>
+            <span class="material-icons small-icon">expand_more</span>
+        </button>
+        <div class="grid-button-dropdown-content" id="dropdown-content">
+            <a href="#" onclick="switchToGridView()">Grid View</a>
+            <a href="#" onclick="switchToListView()">List View</a>
+        </div>
+    </div>
+
+    <div class="patient-question-table">
+        <table>
+            <tbody>
+            <tr class="header">
+                <td class="table-first-header-column">PATIENT QUESTIONS</td>
+                <td class="table-second-header-column">Using PARP inhibitor as maintenance treatment</td>
+                <td class="table-second-header-column">Not using PARP inhibitor as maintenance treatment</td>
+            </tr>
+
+            <tr>
+                <td class="table-first-column">What does this choice include?</td>
+                <td class="table-second-column">After completing chemotherapy, you will take a pill once or twice a day. You’ll also need to see the doctor every few months.</td>
+                <td class="table-second-column">After completing chemotherapy you will have checkups every few months but you will not get a PARP inhibitor.</td>
+            </tr>
+
+            <tr>
+                <td class="table-first-column">Will this option change how long I will live?</td>
+                <td class="table-second-column"> <b>67 out of 100 </b>(67%)  patients will live <b>7 years or more</b>  with maintenance treatment.</td>
+                <td class="table-second-column"> <b>47 out of 100</b> (47%) patients will live <b>7 years or more</b> without maintenance treatment.</td>
+            </tr>
+
+            <tr>
+                <td class="table-first-column">When would I need to start this treatment after finishing chemotherapy?</td>
+                <td class="table-second-column">You will start taking this pill within 8 weeks after completing chemotherapy.</td>
+                <td class="table-second-column">You will not take further treatment and start undergoing check ups.</td>
+            </tr>
+
+            <tr>
+                <td class="table-first-column">How long would I be on this treatment?</td>
+                <td class="table-second-column">You will be on this treatment for up to three years.</td>
+                <td class="table-second-column">You will not take further treatment and start undergoing check ups.</td>
+            </tr>
+
+            <tr>
+                <td class="table-first-column">Will my cancer come back?</td>
+                <td class="table-second-column">This type of cancer usually does come back or recur for most patients.</td>
+                <td class="table-second-column">This type of cancer usually does come back or recur for most patients.</td>
+            </tr>
+
+            <tr>
+                <td class="table-first-column">If the cancer comes back, when does it come back?</td>
+                <td class="table-second-column">About <b>43 out of 100</b> (43%) patients will have cancer come back and need more treatment.</td>
+                <td class="table-second-column">About <b>68 out of 100</b> (68%) patients will have cancer come back and need more treatment</td>
+            </tr>
+
+            <tr>
+                <td class="table-first-column">What are the side effects and harms?</td>
+                <td class="table-second-column">This medicine might make you feel tired, nausea, diarrhea, or constipated. Some people might have low blood counts and need to stop treatment or reduce their dose. In very rare cases, this medicine could cause a kind of blood cancer. (1.5% of patients (SOLO1))</td>
+                <td class="table-second-column">After chemotherapy, you'll start to feel better and more like yourself in the next few weeks to months as you recover from its effects.</td>
+            </tr>
+
+            <tr>
+                <td class="table-first-column">How will I be checked on?</td>
+                <td class="table-second-column">While you're on this medicine, you'll need to go for regular checkups with your cancer doctor. The doctor will do tests to check your blood counts, tumor markers, and make sure your liver and kidneys are working well.</td>
+                <td class="table-second-column">You will have regular checkups with your cancer doctor and labs for tumor marker levels.</td>
+            </tr>
+
+            <tr>
+                <td class="table-first-column">What else should I know?</td>
+                <td class="table-second-column">If you take this medicine for more than 2-3 years, it makes you more likely to get a type of blood cancer without further reduction of the risk of your cancer coming back.</td>
+                <td class="table-second-column">The use of this medicine might be different in the future as we learn more from research. If your cancer comes back, your doctor may talk to you about using this medicine again.</td>
+            </tr>
+
+        </tbody>    
+        </table>
+        
+    </div>
+
+    <div class="glossary-section">
+        <button class="glossary-text-button">
+            <div class="glossary-terms-text">Glossary Terms</div>
+            <span class="material-icons small-icon">expand_more</span>
+        </button>
+
+        <div class="hidden-glossary-terms">
+            <div class="text-blurb">
+                <h3>PARP Inhibitor</h3>
+                <p>PARP stands for Poly ADP Ribose Polymerase. PARP Inhibitor medicines help slow down or stop enzymes called poly ADP Ribose Polymerase that fix DNA damage. When this repair is stopped, cancer cells with BRCA mutations or problems in DNA repair build up too many mistakes, causing them to stop working and die. The immune system then recognizes these abnormal cells and destroys them.</p>
+                <h3>CA125</h3>
+                <p>CA125 is a protein in the blood that can be measured with a blood test. It stands for "cancer antigen 125." This test is often used in women who have been diagnosed with ovarian cancer or are at high risk of developing it. Monitoring CA125 levels over time can help doctors track the progression of the disease or the effectiveness of treatment. However, it's important to note that CA125 levels can also be higher in non-cancerous conditions.</p>
+            </div>
+
+            <div class="text-blurb">
+                <h3>BRCA1 and BRCA2 genes</h3>
+                <p>BRCA1 and BRCA2 are genes that produce proteins that help to suppress tumors and repair damaged DNA within cells. Mutations or changes in these genes can increase the risk of developing certain types of cancer, particularly breast and ovarian cancer. These mutations can be inherited from a person's parents and are associated with hereditary breast and ovarian cancer syndrome. Individuals with mutations in BRCA1 or BRCA2 have a higher chance of getting breast, ovarian, and other cancers compared to the general population.</p>
+                <h3>HRD</h3>
+                <p>Homologous recombination is one of the ways the body repairs DNA and is made up of a group of proteins. When one of these proteins does not work due to mutations it is called homologous recombination deficiency.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="line-section"></div>
+        <div class="reference-section">
+          <div class="reference-text" id="openModal">References</div>
+          <span>|</span>
+          <div class="reference-text">More About this Tool</div>
+          <span>|</span>
+          <div class="last-updated-text">Last Update: January 07, 2025</div>
+        </div>
+      </div>
+
+      <div class="modal-container" id="modalContainer">
+        <div class="modal" id="modal">
+            <div class="modal-header">
+                <h1 class="modal-title" >References</h1>
+                <div class="close" id="closeModal">x</div>
+            </div>
+            <div class="popup-line"></div>
+            <h3>BRCA Mutation</h3>
+            <ol class="reference-orderedlist">
+                <li>DiSilvestro P, Banerjee S, Colombo N, Scambia G, Kim BG, Oaknin A, Friedlander M, Lisyanskaya A, Floquet A, Leary A, Sonke GS, Gourley C, Oza A, González-Martín A, Aghajanian C, Bradley W, Mathews C, Liu J, McNamara J, Lowe ES, Ah-See ML, Moore KN; SOLO1 Investigators. Overall Survival With Maintenance Olaparib at a 7-Year Follow-Up in Patients With Newly Diagnosed Advanced Ovarian Cancer and a BRCA Mutation: The SOLO1/GOG 3004 Trial. J Clin Oncol. 2023 Jan 20;41(3):609-617. doi: 10.1200/JCO.22.01549. Epub 2022 Sep 9. PMID: 36082969; PMCID: PMC9870219. <a href="https://ascopubs.org/doi/10.1200/JCO.22.01549?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed">https://ascopubs.org/doi/10.1200/JCO.22.01549?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed</a></li>
+                <li>González-Martín A, Pothuri B, Vergote I, DePont Christensen R, Graybill W, Mirza MR, McCormick C, Lorusso D, Hoskins P, Freyer G, Baumann K, Jardon K, Redondo A, Moore RG, Vulsteke C, O'Cearbhaill RE, Lund B, Backes F, Barretina-Ginesta P, Haggerty AF, Rubio-Pérez MJ, Shahin MS, Mangili G, Bradley WH, Bruchim I, Sun K, Malinowska IA, Li Y, Gupta D, Monk BJ; PRIMA/ENGOT-OV26/GOG-3012 Investigators. Niraparib in Patients with Newly Diagnosed Advanced Ovarian Cancer. N Engl J Med. 2019 Dec 19;381(25):2391-2402. doi: 10.1056/NEJMoa1910962. Epub 2019 Sep 28. PMID: 31562799. <a href=" https://www.nejm.org/doi/10.1056/NEJMoa1910962?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed">https://www.nejm.org/doi/10.1056/NEJMoa1910962?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed</a></li>
+                <li>Coleman RL, Fleming GF, Brady MF, Swisher EM, Steffensen KD, Friedlander M, Okamoto A, Moore KN, Efrat Ben-Baruch N, Werner TL, Cloven NG, Oaknin A, DiSilvestro PA, Morgan MA, Nam JH, Leath CA 3rd, Nicum S, Hagemann AR, Littell RD, Cella D, Baron-Hay S, Garcia-Donas J, Mizuno M, Bell-McGuinn K, Sullivan DM, Bach BA, Bhattacharya S, Ratajczak CK, Ansell PJ, Dinh MH, Aghajanian C, Bookman MA. Veliparib with First-Line Chemotherapy and as Maintenance Therapy in Ovarian Cancer. N Engl J Med. 2019 Dec 19;381(25):2403-2415. doi: 10.1056/NEJMoa1909707. Epub 2019 Sep 28. PMID: 31562800; PMCID: PMC6941439. <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa1909707#:~:text=This%20phase%203%20trial%20shows,high%2Dgrade%20serous%20ovarian%20carcinoma">https://www.nejm.org/doi/full/10.1056/NEJMoa1909707#:~:text=This%20phase%203%20trial%20shows,high%2Dgrade%20serous%20ovarian%20carcinoma</a></li>
+            </ol>
+        </div>
+      </div>
+
+      <div id="tint-overlay"></div>
+
+    <script src="brcamutation.js">
+
+//         function switchToListView(){
+//             const table = document.getElementById("patient-table");
+//             table.classList.remove("grid-view");
+//             table.classList.add("list-view");
+//         }
+    </script>
+
+
 </body>
 </html>
