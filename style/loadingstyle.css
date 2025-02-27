@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-right: 4%; 
+    margin-left: 3%; 
+    text-align: left;
+    margin-top: 3%;
+    color:#052E50;
+    font-family: 'Inria Serif', serif;
+    line-height: 1.5;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.header-explanation{
+    font-style: italic;
+    font-size:26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+}
+
+.document-card-collection{
+    padding-top: 4%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.document-card{
+    background-color: #052E50;
+    color:white;
+    display: flex;
+    /* flex-direction: column;
+    justify-content: center;  */
+    align-items: center;
+    width: 30%;
+    height: 30vh;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.document-card:hover{
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3);
+    background-color: #031423; 
+
+    /* 042038 */
+}
+
+.document-card-header{
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  
+}
+
+
+.document-card-text{
+    font-size:16px;
+    font-family: 'Inria Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    margin: 8%;
+}
+

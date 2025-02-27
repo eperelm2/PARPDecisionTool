@@ -22,6 +22,55 @@ body {
     font-size: 16px;
 }
 
+.header-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-button{
+    color:#3C3C44;
+    background-color: white;
+    border-radius: 2px;
+    border: .5px solid #3C3C44;
+    display: inline-flex;  /* Makes the link wrap the entire icon */
+    align-items: center;  /* Centers the icon inside */
+    justify-content: center;
+    padding: 10px;  /* Adds clickable padding */
+    text-decoration: none;  /* Removes underline */
+    margin-bottom: 6%;
+}
+
+.header-button:hover{
+    background-color: rgb(231, 231, 231);
+}
+
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 100%; /* Places the text above the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
 .whats-next-section{
     padding-top: 3%;
 }
@@ -58,13 +107,10 @@ body {
     border:#1D6785 ;
     font-family: 'Inria Sans', sans-serif;
     display: flex; /* Flexbox to align items horizontally */
-      align-items: center; /* Center items vertically */
-
-
-      gap: 8px; /* Space between elements */
-      padding: 10px 10px; /* Add padding around the button */
-
-      cursor: pointer; /* Pointer cursor on hover */
+    align-items: center; /* Center items vertically */
+    gap: 8px; /* Space between elements */
+    padding: 10px 10px; /* Add padding around the button */
+    cursor: pointer; /* Pointer cursor on hover */
 }
 
 .material-icons.small-icon {
@@ -117,7 +163,6 @@ td{
     font-weight: bold;
     vertical-align: top;
     padding-top: 1%;
-    /* padding-right:3%; */
     padding-bottom:1%;
 }
 
@@ -128,9 +173,62 @@ td{
     vertical-align: top;
     padding-top: 1%;
     padding-bottom: 1%;
-    /* padding-right: 1%; */
     width: 35%;
 }
+
+
+/* LIST VIEW */
+.patient-question-list{
+    display:none;
+}
+
+.patient-question-list-header{
+    background-color: #052E50;
+    color: white;
+    font-size: 20px;
+    font-family: 'Inria Sans', sans-serif;
+    width: 25%;
+    font-weight: lighter;
+    width: 99%;
+    margin-top:2%;
+    padding-top:1%;
+    padding-bottom:1%;
+    padding-left:1%;
+}
+
+.patient-question-list-subheader{
+    background-color: #E1ECED;
+    color: #052E50;
+    font-size: 18px;
+    font-family: 'Inria Sans', sans-serif;
+    width: 25%;
+    font-weight: 600;
+    width: 99%;
+    margin-top:.5%;
+    padding-top:1%;
+    padding-bottom:1%;
+    padding-left:1%;
+}
+
+.patient-question-list-text{
+    color: #052E50;
+    font-family: 'Inria Sans', sans-serif;
+    font-weight:lighter;
+    padding-left:1%;
+    line-height: 2;
+}
+
+.patient-question-list-text-header{
+    font-size: 19px;
+    margin-top:1.5%;
+    font-weight:500;
+ 
+}
+
+.patient-question-list-text-body{
+    font-size: 16px;
+}
+
 
 .glossary-section{
     padding-top:2%;
@@ -159,18 +257,35 @@ td{
 
 .hidden-glossary-terms{
     display: none;
-    
 }
 
 .hidden-glossary-terms.show {
     display: grid;
-            grid-template-columns: 1fr 1fr; /* Create two equal columns */
-            gap: 20px;                     /* Add space between columns */
-            padding: 20px;
+    grid-template-columns: 1fr 1fr; /* Create two equal columns */
+    gap: 20px;                     /* Add space between columns */
+    padding: 20px;
 }
 
 .text-blurb{
     font-family: 'Inria Sans', sans-serif;
+}
+
+.PARP-header{
+    display: flex;
+    align-items:baseline;
+}
+
+#video-link{
+    padding-left: 3%;
+    color: #3C3C44; 
+}
+
+#video-icon{
+    font-size: 22px;
+}
+
+#video-icon:hover{
+    color:blue;
 }
 
 .line-section{
@@ -196,12 +311,8 @@ td{
     text-decoration: underline;
 }
 
-/* .grid-button-dropdown-content {
-   
-  } */
-
-  #dropdown-content{
-     display: none; /* Initially hidden */
+#dropdown-content{
+    display: none; 
     position: absolute;
     background-color: white;
     min-width: 160px;
@@ -222,12 +333,12 @@ td{
     background-color: #f1f1f1;
   }
 
-  .patient-question-table.list-view {
+  #patient-question-table.list-view {
     display: block;
 }
 
 #tint-overlay {
-    display: none; /* Initially hidden */
+    display: none; 
     position: fixed;
     top: 0;
     left: 0;
@@ -238,54 +349,97 @@ td{
     pointer-events: none; /* Makes it non-interactive */
   }
 
-
   .modal {
     display: none; /* Hidden by default */
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     background-color: white;
     padding: 2%;
     padding-top: 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 10000; /* Ensure it appears above other content */
     border-radius: 2px;
+    width: 40%; 
+    height: 80%; 
+    overflow:hidden;
+    padding-bottom: 5%;
+    opacity: 0;
+    transform: translate(100%, -50%);
+    filter: blur(5px); /* Initially blurred */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out, filter 0.5s ease-out;
+}    
+
+
+.modal.show {
+    display: block;
+    opacity: 1;
+    position: fixed; /* Ensure it appears properly */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1); /* Center it and remove shrink */
+    opacity: 1;
+    filter: blur(0);
     
-    width: 40%; /* Fixed width */
-    height: 80%; /* Fixed height */
-    overflow-y: auto; /* Enable scrolling when content overflows */
 }
 
   .modal-header{
+    overflow-y: auto;
     display: flex;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
   }
 
-  .modal-title{
+  .modal-body {
+    flex-grow: 1; /* Takes remaining height */
+    overflow-y: auto; /* Enables scrolling */
+    padding: 15px;
+    max-height: calc(80vh - 60px); /* Adjust to leave space for the header */
+    padding-right: 8%;
+
+}
+
+.modal-title{
     color: #1D6785;
   }
+  
 
-  .close{
+.close{
     font-size: 20px;
+    cursor: pointer;
   }
 
-  .popup-line{
+.popup-line{
     background-color: #9B9B9B;
     height:1px;
-    /* margin: 20px 0; */
     margin-left: -4.3%;
     margin-right: -4.3%;
-    /* background-color:green; */
   }
 
-  .reference-orderedlist {
+.reference-orderedlist {
     max-width: 100%;
     overflow-wrap: break-word; /* Ensure long text wraps properly */
     word-break: break-word;
 }
 
 .reference-orderedlist li {
-    margin-bottom: 4%; /* Adjust as needed */
-    line-height: 1.5; /* Improves readability */
+    margin-bottom: 4%; 
+    line-height: 1.5; 
+    font-weight: lighter;
+}
+
+.glossary-text{
+    font-weight: lighter;
+}
+
+@media screen and (max-width: 650px) {
+    .patient-question-list-text {
+        display: none;
+    }
+
+    .hidden-glossary-terms.show {
+        grid-template-columns: 1fr; 
+    }
 }
