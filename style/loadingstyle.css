@@ -64,6 +64,7 @@ header{
     flex-direction: column;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     justify-content: center;
+    margin-left: 2%;
 }
 
 .document-card-nonbutton{
@@ -115,6 +116,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 70%;
 }
 .box {
     background-color: #1e3a5f;
